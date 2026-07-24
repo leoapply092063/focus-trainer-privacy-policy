@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Focus Trainer Support</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --background: #f5f7f5;
+      --surface: #ffffff;
+      --text: #171a17;
+      --muted: #626a64;
+      --border: #d8ded9;
+      --green: #168125;
+      --red: #ba1220;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        color-scheme: dark;
+        --background: #0e100e;
+        --surface: #171a17;
+        --text: #f5f7f5;
+        --muted: #adb5ae;
+        --border: #353b36;
+        --green: #55b864;
+        --red: #f06470;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+      overflow-wrap: break-word;
+    }
+
+    main {
+      width: min(760px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 48px 0 64px;
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: 88px minmax(0, 1fr);
+      align-items: center;
+      gap: 18px;
+      border-left: 5px solid var(--green);
+      padding-left: 18px;
+      margin-bottom: 32px;
+    }
+
+    header img {
+      width: 88px;
+      height: 88px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    header div,
+    section {
+      min-width: 0;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 3rem;
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    header p {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    section {
+      margin-top: 18px;
+      padding: 22px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: 1.2rem;
+    }
+
+    p {
+      margin: 8px 0 0;
+    }
+
+    ul {
+      margin: 10px 0 0;
+      padding-left: 22px;
+    }
+
+    a {
+      color: var(--green);
+      font-weight: 650;
+      overflow-wrap: anywhere;
+    }
+
+    .contact {
+      border-top: 4px solid var(--red);
+    }
+
+    footer {
+      margin-top: 28px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 460px) {
+      main {
+        padding-top: 28px;
+      }
+
+      header {
+        grid-template-columns: 64px minmax(0, 1fr);
+        gap: 14px;
+        padding-left: 14px;
+      }
+
+      header img {
+        width: 64px;
+        height: 64px;
+      }
+
+      h1 {
+        font-size: 1.7rem;
+      }
+
+      header p {
+        font-size: 0.98rem;
+      }
+
+      section {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <img src="focus-trainer-icon.png" alt="Focus Trainer app icon">
+      <div>
+        <h1>Focus Trainer Support</h1>
+        <p>Help with timers, Full Access purchases, Screen Time, notifications, and app data.</p>
+      </div>
+    </header>
+
+    <section class="contact">
+      <h2>Contact support</h2>
+      <p>Email <a href="mailto:focustrainersupport@gmail.com">focustrainersupport@gmail.com</a>.</p>
+      <p>Include your iPhone model, iOS version, Focus Trainer version, and a short description of what happened. Do not send passwords, payment-card information, goal names, timer labels, or other private text.</p>
+    </section>
+
+    <section>
+      <h2>Purchases and Full Access</h2>
+      <ul>
+        <li>Open the Focus Trainer menu, expand About, and select Full Access.</li>
+        <li>Use Restore on the purchase screen when a previous purchase is not recognized.</li>
+        <li>Monthly and yearly subscriptions are managed through your Apple Account subscription settings.</li>
+        <li>Lifetime access is a one-time non-consumable purchase and does not renew.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Permissions</h2>
+      <p>Notifications and Screen Time access are optional. Core timers, goals, habits, rewards, and analysis remain available without Screen Time. Some distraction shielding and app-activity reports require Apple's Screen Time authorization.</p>
+    </section>
+
+    <section>
+      <h2>Local app data</h2>
+      <p>Focus Trainer stores timer history, goals, habits, XP, achievements, and preferences locally on the device. Deleting the app also deletes this local data unless it can be restored from an Apple device backup.</p>
+    </section>
+
+    <section>
+      <h2>Privacy</h2>
+      <p>Read the <a href="./">Focus Trainer Privacy Policy</a> for details about local data, optional permissions, analytics choices, and contact information.</p>
+    </section>
+
+    <footer>
+      Focus Trainer support information. Last updated July 23, 2026.
+    </footer>
+  </main>
+</body>
+</html>
