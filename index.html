@@ -162,10 +162,9 @@
           collectable, or app usage data.
         </p>
         <p>
-          The current iOS version does not include Firebase or transmit analytics events. The
-          Android version may use optional Firebase Analytics only after the user allows
-          analytics. Typed goal, habit, project, job, test, timer-label, or description text is
-          not collected through analytics.
+          The iOS and Android versions may use optional Firebase Analytics only after the user
+          allows analytics. Typed goal, habit, project, job, test, timer-label, description, note,
+          or other open-ended text is not collected through analytics.
         </p>
       </div>
     </header>
@@ -285,23 +284,28 @@
         <li>Unlock collectables based on level</li>
         <li>Apply difficulty settings, app usage rules, alarms, and screen blocker behavior</li>
         <li>Remember user preferences</li>
-        <li>Measure optional Android analytics events if the user allows analytics collection</li>
+        <li>Measure optional analytics events if the user allows analytics collection</li>
         <li>Help diagnose support requests when users contact us</li>
       </ul>
       <h3>Platform Analytics</h3>
       <p>
-        The current iOS version does not include Firebase Analytics or another off-device
-        analytics SDK and does not transmit analytics events.
-      </p>
-      <p>
-        On Android, if the user selects "Allow analytics", Focus Trainer may send limited app
-        usage events to Firebase Analytics, such as onboarding choices, the selected "where did
-        you hear about us" option, whether the user said they plan to take a test, do a job, or
-        work on a project, and successful creation of test, job, project, or habit items.
+        On iOS and Android, analytics collection is disabled by default. If the user selects
+        "Allow analytics", Focus Trainer may send limited fixed-choice events to Firebase
+        Analytics, such as onboarding choices, the selected "where did you hear about us" option,
+        whether the user said they plan to take a test, do a job, or work on a project, and
+        successful creation of test, job, project, or habit items.
       </p>
       <p>
         Focus Trainer does not send typed goal names, habit names, project names, job names, test
-        names, descriptions, notes, or other open-ended text to Firebase Analytics.
+        names, timer labels, descriptions, notes, or other open-ended text to Firebase Analytics.
+      </p>
+      <p>
+        When analytics is allowed, Firebase may generate a pseudonymous app-instance identifier,
+        derive approximate location from a masked Internet Protocol address, and process app
+        lifecycle, product interaction, diagnostic, purchase, or subscription events. Focus
+        Trainer does not include advertising-identifier support, does not enable advertising
+        personalization, and does not use this information to track users across other companies'
+        apps or websites.
       </p>
     </section>
 
@@ -343,9 +347,8 @@
       <p>Focus Trainer does not sell personal information.</p>
       <p>
         Focus Trainer does not operate a backend server that receives the user's timer, goal, XP,
-        achievement, collectable, or app-usage data. The current iOS version does not transmit
-        analytics. On Android, if the user allows analytics, Firebase Analytics may receive the
-        limited events described above.
+        achievement, collectable, or app-usage data. If the user allows analytics, Firebase
+        Analytics may receive the limited events and technical analytics data described above.
       </p>
       <p>We may disclose information only in limited situations:</p>
       <ul>
@@ -367,7 +370,7 @@
         <li>Apple may process App Store purchases, subscriptions, installation, crash, and review information under Apple's policies.</li>
         <li>Apple's Screen Time frameworks process authorized app selections, shields, and activity reports under Apple's platform privacy boundaries.</li>
         <li>Google Play may process app installation, crash, purchase, review, or device information according to Google's policies.</li>
-        <li>Firebase Analytics may process optional Android app usage events if the user allows analytics collection.</li>
+        <li>Firebase Analytics may process optional iOS and Android analytics events if the user allows analytics collection.</li>
         <li>Android may handle permissions, notifications, usage access, overlay settings, and native sharing.</li>
         <li>Third-party apps selected from the share sheet process shared content according to their own policies.</li>
       </ul>
@@ -392,6 +395,13 @@
         may be read again after reinstallation. It is not transmitted to Focus Trainer, is not used
         for tracking, and cannot be accessed or deleted remotely because Focus Trainer has no user
         account or backend database.
+      </p>
+      <p>
+        If the user allows analytics, Firebase retains analytics data according to the retention
+        settings configured for the Focus Trainer Firebase project and Google's policies. The user
+        can disable analytics in the Focus Trainer side menu. Disabling it stops future collection
+        and asks the Firebase SDK to reset the app's local analytics identifier and cached analytics
+        data.
       </p>
       <p>Other local data may remain on the device until:</p>
       <ul>
@@ -421,6 +431,10 @@
         <li>Overlay or screen blocker permission on Android</li>
         <li>Notifications</li>
       </ul>
+      <p>
+        Users can enable or disable optional Firebase Analytics from the Focus Trainer side menu.
+        Analytics remains disabled unless the user actively allows it.
+      </p>
       <p>
         Because Focus Trainer does not maintain a backend account system, deleting local app data on
         the device is generally the primary way to delete app data.
