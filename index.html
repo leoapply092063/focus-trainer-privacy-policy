@@ -380,7 +380,20 @@
         Focus Trainer keeps local app data for as long as needed to provide app functionality or
         until the user deletes it.
       </p>
-      <p>Local data may remain on the device until:</p>
+      <p>
+        Most local app content is removed when the user deletes the app or clears its storage. On
+        iOS, Focus Trainer also stores limited free-use eligibility state in the iOS Keychain so
+        uninstalling and reinstalling the app does not reset the free-use allowance. This state
+        includes dates on which Focus was started, cumulative Focus and Break elapsed totals, and
+        technical timer progress checkpoints used to avoid double-counting.
+      </p>
+      <p>
+        The iOS Keychain eligibility state may remain on the device after the app is uninstalled and
+        may be read again after reinstallation. It is not transmitted to Focus Trainer, is not used
+        for tracking, and cannot be accessed or deleted remotely because Focus Trainer has no user
+        account or backend database.
+      </p>
+      <p>Other local data may remain on the device until:</p>
       <ul>
         <li>The user deletes app data through Android settings</li>
         <li>The user uninstalls the app</li>
@@ -395,6 +408,11 @@
       <p>
         Users can delete locally stored Focus Trainer data by uninstalling the app. Android users
         may also clear the app's storage through Android system settings.
+      </p>
+      <p>
+        On iOS, deleting or uninstalling the app does not necessarily delete the limited free-use
+        eligibility state stored in the iOS Keychain. iOS controls Keychain retention. Focus Trainer
+        cannot remotely identify, access, or delete this on-device state.
       </p>
       <p>Users can also manage permissions through iOS or Android settings, including:</p>
       <ul>
@@ -447,7 +465,8 @@
       <p>
         Because Focus Trainer generally stores app data locally and does not maintain user accounts
         or a backend database, many privacy choices can be exercised directly on the device by
-        deleting app data, uninstalling the app, or changing permissions.
+        deleting app data, uninstalling the app, or changing permissions. The limited free-use
+        eligibility state described above may remain in the iOS Keychain after uninstall.
       </p>
     </section>
 
